@@ -1,0 +1,1236 @@
+/* CSS reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "wc-mano-negra";
+  src: url("./wc-mano-negra-bta/WCManoNegraBta/WCManoNegraBta.otf");
+  src: url("./wc-mano-negra-bta/WCManoNegraBta/WCManoNegraBta.ttf");
+}
+@font-face {
+  font-family: "aleo";
+  src: url("./Aleo/Aleo-Regular.ttf");
+}
+@font-face {
+  font-family: "aleo bold";
+  src: url("./Aleo/Aleo-Bold.ttf");
+}
+@font-face {
+  font-family: "aleo light";
+  src: url("./Aleo/Aleo-Light.ttf");
+}
+@font-face {
+  font-family: "aleo italic";
+  src: url("./Aleo/Aleo-Italic.ttf");
+}
+@font-face {
+  font-family: "aleo light italic";
+  src: url("./Aleo/Aleo-LightItalic.ttf");
+}
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* NAV BAR */
+nav {
+  overflow: hidden;
+  position: relative;
+  margin: 0px;
+  background-color: white;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+nav .nav-links {
+  display: none;
+}
+
+/* Style navigation menu links */
+nav a {
+  color: white;
+  /* padding: top-bottom right-left */
+  padding: 14px 25px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+nav a.icon {
+  background: white;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* MODAL */
+.nav-modal {
+  display: none;
+}
+
+/* The Modal (background) */
+.nav-modal-content {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(238, 77, 77, 0.95); /* Black w/ opacity */
+}
+
+/* The Close Button */
+.container-close {
+  display: flex;
+  justify-content: end;
+}
+.close {
+  color: rgb(54, 54, 54);
+  margin-right: 25px;
+  font-size: 55px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.nav-modal-content .nav-links {
+  text-align: center;
+  line-height: 4rem;
+  margin-top: 70px;
+}
+
+.nav-modal-content .nav-links a:link {
+  text-decoration: none;
+}
+.nav-modal-content .nav-links a {
+  color: white;
+  font-size: x-large;
+  font-family: "aleo";
+  /* add border before hover. Then element will not be moved */
+  border-top: 1px solid rgba(238, 77, 77, 0.95);
+  border-bottom: 1px solid rgba(238, 77, 77, 0.95);
+}
+.nav-modal-content .nav-links a:hover,
+.nav-modal-content .nav-links a:focus {
+  color: rgb(54, 54, 54);
+  border-top: 1px solid rgb(54, 54, 54);
+  border-bottom: 1px solid rgb(54, 54, 54);
+  padding: 10px 0;
+}
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* Main image with slider */
+.carousel {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  margin: auto; /* move element to the centar */
+  width: 100%;
+  height: 500px;
+}
+.carousel img {
+  pointer-events: none;
+  position: absolute;
+  width: fit-content;
+  height: 100%;
+  z-index: -1;
+}
+
+.flickity-page-dots {
+  bottom: 15px;
+}
+.flickity-page-dots .dot {
+  background: white;
+  opacity: 1;
+  margin: 0 4px;
+}
+.flickity-page-dots .dot:hover {
+  background: red;
+}
+.flickity-page-dots .dot.is-selected {
+  background: red;
+}
+
+.flickity-prev-next-button.next {
+  right: 2px;
+}
+.flickity-prev-next-button.previous {
+  left: 0;
+}
+.flickity-prev-next-button .flickity-button-icon,
+.flickity-prev-next-button.next,
+.flickity-prev-next-button.previous,
+.flickity-prev-next-button .flickity-button-icon {
+  background: transparent;
+}
+.flickity-button-icon {
+  color: white;
+}
+.flickity-button-icon:hover {
+  color: red;
+}
+
+.carousel .text {
+  text-align: center;
+  color: white;
+  padding-top: 130px;
+}
+
+.text h1 {
+  font-size: 52px;
+  font-family: "wc-mano-negra";
+  line-height: 1.2em;
+  font-weight: normal;
+  margin: auto;
+}
+.text p {
+  font-size: 14px;
+  line-height: 1.5em;
+  font-family: "aleo";
+  position: relative;
+  margin: 20px 90px 0;
+}
+
+.text p::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  left: -40px;
+  top: 50%;
+  position: absolute;
+  background-color: white;
+}
+.text p::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  right: -40px;
+  top: 50%;
+  position: absolute;
+  background-color: white;
+}
+
+.title {
+  font-family: "aleo bold";
+  text-align: left;
+  margin: 20px 20px;
+  font-size: 16px;
+}
+
+h3.title::after {
+  content: "";
+  display: inline-block;
+  height: 0.6em;
+  vertical-align: bottom;
+  width: 30%;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid #e5e3e3;
+}
+
+h3#title-dishes.title::after {
+  display: none;
+}
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* Menu*/
+.menu {
+  border-top: solid 3px rgb(243, 73, 73);
+  margin-bottom: 60px;
+}
+
+.menu .title-menu {
+  position: relative;
+  width: 140px;
+  height: 50px;
+  background-color: rgb(243, 73, 73);
+  margin: auto;
+}
+.menu .title-menu::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid rgb(255, 255, 255);
+  border-left: 70px solid transparent;
+  border-right: 70px solid transparent;
+}
+.menu .title-menu #title-menu {
+  position: absolute;
+  font-family: "aleo bold";
+  font-size: 16px;
+  color: white;
+  margin: 10px 32px;
+  display: flex;
+}
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* TABLE */
+.menu .meal {
+  display: flex;
+  flex-wrap: wrap; /* one below the other */
+  justify-content: center;
+  margin: 30px 0 10px;
+}
+.menu td {
+  font-family: "aleo";
+  font-size: 14px;
+}
+.menu td.meal-price {
+  text-align: end;
+}
+.menu td.meal-name,
+.menu td.desc {
+  text-align: justify;
+}
+.menu td.desc {
+  font-family: "aleo light italic";
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+.menu .table-one,
+.menu .table-two {
+  width: 80%;
+}
+.menu .body {
+  position: relative;
+}
+
+.menu .meal-name {
+  background-color: white;
+  float: left;
+  padding-right: 15px;
+}
+.menu .meal-price {
+  background-color: white;
+  float: right;
+  padding-left: 15px;
+}
+
+.menu .line {
+  border-bottom: 1px solid rgb(227, 225, 225);
+  position: absolute;
+  top: 7px;
+  width: 100%;
+  z-index: -1;
+}
+/* 
+*
+*
+*
+*/
+/* button */
+.button-menu {
+  position: relative;
+  margin: auto;
+}
+.button-menu #button-menu {
+  font-family: "aleo";
+  border: none;
+  color: white;
+  margin: auto;
+  /* padding: top right bottom left */
+  padding: 5px 10px 5px 15px;
+  background-color: rgb(243, 73, 73);
+  font-size: 13px;
+  display: flex;
+}
+
+.button-menu #less {
+  transform: rotate(270deg);
+}
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* MODAL */
+.menu-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding: 30px;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* The Modal (background) */
+.menu-modal .menu-modal-content {
+  position: relative;
+  /* top: 30px; */
+  width: 100%; /* Could be more or less, depending on screen size*/
+  background-color: #fefefe;
+  margin: auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+}
+
+/* The Close Button */
+.menu-modal .close-menu {
+  color: rgb(85, 85, 85);
+  font-size: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.container-img {
+  display: flex;
+  justify-content: center;
+}
+.container-img img {
+  transform: scale(1.3);
+}
+
+.container-table {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.menu-modal .menu-modal-content table {
+  color: rgb(85, 85, 85);
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.menu-modal tr.body {
+  border-top: 1px solid rgb(227, 225, 225);
+}
+
+.menu-modal tr.header {
+  font-size: 18px;
+  font-family: "aleo bold";
+}
+.menu-modal .header td {
+  padding-bottom: 5px;
+}
+.menu-modal td.meal-name,
+.menu-modal td.meal-price {
+  font-family: "aleo";
+  font-size: 14px;
+  text-align: justify;
+  padding-top: 10px;
+}
+.menu-modal td.meal-price,
+.menu-modal .header #price {
+  text-align: end;
+}
+
+.menu-modal td.desc {
+  font-family: "aleo light italic";
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* DISHES*/
+.dishes {
+  margin: 20px;
+}
+
+.dishes .title {
+  margin-left: 0;
+}
+
+.slick-slide {
+  margin: 0 20px;
+}
+
+.slick-slide img {
+  position: relative;
+  width: 100%;
+  margin-right: 0;
+}
+
+.slick-slider {
+  width: 80%;
+}
+
+ul.slick-dots {
+  top: -43px;
+  text-align: right;
+  bottom: 266px;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+.slick-dots li.slick-active button:before {
+  color: red;
+}
+.oneLineDesc {
+  display: flex;
+  justify-content: space-between;
+  font-family: "aleo bold";
+  font-size: 14px;
+  margin: 10px 0;
+  height: fit-content;
+}
+.slide .imageDescription .oneLineLike {
+  display: flex;
+  justify-content: start;
+  font-family: "aleo light";
+  font-size: 12px;
+}
+
+.slick-slider .slide .imageDescription .likes,
+.slick-slider .slide .imageDescription .counter,
+.slick-slider .slide .imageDescription .heart {
+  font-family: "aleo light";
+  font-size: 10px;
+  margin: 10px 2px;
+}
+
+.responsive {
+  margin: auto;
+}
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* ABOUT */
+.about {
+  font-family: "aleo light";
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+#subtitle {
+  font-size: 26px;
+  margin: 20px 20px;
+  text-align: left;
+  line-height: 1em;
+}
+.about p,
+.about ul {
+  font-size: 12px;
+  text-align: justify;
+  margin: 20px 20px;
+}
+.about hr {
+  margin: 0 20px;
+}
+
+.about #pList {
+  margin-bottom: 0px;
+}
+.about ul {
+  margin-top: 0px;
+}
+.about p {
+  line-height: 2em;
+}
+.about li {
+  margin: 5px 20px;
+  list-style-type: none;
+}
+.about li::before {
+  content: "•";
+  color: red;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.about .quote {
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2em;
+}
+
+blockquote {
+  position: relative;
+}
+#wrapper {
+  text-align: center;
+  margin: 0 20px;
+}
+blockquote:before {
+  position: absolute;
+  content: open-quote;
+  font-size: 3em;
+  left: 0.8em;
+  top: -0.2em;
+  color: rgb(199, 199, 199);
+}
+blockquote:after {
+  position: absolute;
+  content: close-quote;
+  font-size: 3em;
+  bottom: 0;
+  right: 1em;
+  bottom: -0.55em;
+  color: rgb(199, 199, 199);
+}
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* GALLERY */
+.gallery {
+  margin: auto;
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem;
+}
+.gallery .title {
+  margin-left: 0;
+}
+.grid {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6fr;
+  overflow: hidden;
+
+  grid-template-areas:
+    "image-1 "
+    "image-1 "
+    "image-2"
+    "image-3"
+    "image-4"
+    "image-5";
+}
+
+.grid a {
+  width: 100%;
+  height: 8rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  overflow: hidden;
+}
+.gallery-img {
+  overflow: hidden;
+}
+.one {
+  grid-area: image-1;
+}
+.two {
+  grid-area: image-2;
+}
+.three {
+  grid-area: image-3;
+}
+.four {
+  grid-area: image-4;
+}
+.five {
+  grid-area: image-5;
+}
+#magnifying-glass {
+  font-size: 1.5em;
+  display: inline-block;
+  width: 0.4em;
+  box-sizing: content-box;
+  height: 0.4em;
+  border: 0.09em solid white;
+  position: relative;
+  border-radius: 0.35em;
+  z-index: 100;
+  opacity: 0;
+}
+#magnifying-glass:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  right: -0.25em;
+  bottom: -0.1em;
+  border-width: 0;
+  background: white;
+  width: 0.35em;
+  height: 0.08em;
+  transform: rotate(45deg);
+}
+
+.grid a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(54, 54, 54, 0.5);
+  opacity: 0;
+  transition: opacity 0.5rem;
+}
+
+.grid a:hover #magnifying-glass,
+.grid a:hover,
+.grid a:hover::before {
+  z-index: 1;
+  opacity: 1;
+}
+.grid a:hover,
+.grid a:hover::before {
+  transform: scale(1.2);
+}
+
+.image-one {
+  /*  grid-area: image-one; */
+  min-height: 16rem;
+  background-image: url("./images/g1.jpg");
+}
+.image-two {
+  /* grid-area: image-two; */
+  background-image: url("./images/g2.jpg");
+}
+.image-three {
+  /* grid-area: image-three; */
+  background-image: url("./images/g3.jpg");
+}
+.image-four {
+  /* grid-area: image-four; */
+  background-image: url("./images/g4.jpg");
+}
+.image-five {
+  /* grid-area: image-five; */
+  background-image: url("./images/g5.jpg");
+}
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* BUTTON TO TOP */
+.to-top {
+  display: flex;
+  justify-content: end;
+}
+.button-to-top {
+  border: none;
+  margin: 20px 20px;
+}
+
+.img-btn {
+  width: 40px;
+}
+
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* 
+*
+*
+*
+*
+*
+*
+*
+*
+*/
+/* FOOTER */
+.main-footer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(59, 59, 59);
+}
+
+.main-footer li {
+  list-style-type: none;
+}
+.box a,
+.box li {
+  color: white;
+  text-align: center;
+  font-size: medium;
+}
+.main-footer a:link {
+  text-decoration: none;
+}
+
+.box {
+  display: block;
+  width: 100%;
+  padding: 20px;
+}
+
+@media screen and (min-width: 375px) {
+  .text h1 {
+    padding: 0 40px;
+  }
+  .text p {
+    padding: 0 20px;
+  }
+  .text p::after {
+    right: -20px;
+  }
+  .text p::before {
+    left: -20px;
+  }
+  blockquote:after {
+    right: 1.1em;
+  }
+
+  blockquote:before {
+    left: 0em;
+  }
+}
+@media screen and (min-width: 425px) {
+  .text h1 {
+    padding: 0 60px;
+  }
+
+  .text p {
+    padding: 0 40px;
+  }
+  .text p::before {
+    left: 0;
+  }
+  .text p::after {
+    right: 0;
+  }
+
+  blockquote:after {
+    right: 2.6em;
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "image-1 image-2 image-3"
+      "image-1 image-4 image-5";
+  }
+  .text p::after {
+    right: 100px;
+  }
+  .text p::before {
+    left: 100px;
+  }
+  .menu-modal .menu-modal-content {
+    width: 80%;
+  }
+  .menu .meal {
+    padding: 0px 40px;
+  }
+  .title {
+    margin-bottom: 30px;
+  }
+  ul.slick-dots {
+    top: -53px;
+  }
+  blockquote:after {
+    right: 6.2em;
+  }
+
+  blockquote:before {
+    left: 0.2em;
+  }
+
+  .meal {
+    padding: 0 60px;
+  }
+
+  .carousel .text {
+    padding-top: 180px;
+  }
+  .dishes h3#title-dishes.title::after {
+    content: "";
+    display: inline-block;
+    height: 0.6em;
+    vertical-align: bottom;
+    width: 30%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid #e5e3e3;
+  }
+  .main-footer {
+    flex-wrap: inherit;
+    padding: 0 40px;
+  }
+  .main-footer .box {
+    padding: 50px 0;
+  }
+  .main-footer .box li {
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .carousel img {
+    width: 100%;
+  }
+  .text p::before {
+    left: 215px;
+  }
+  .text p::after {
+    right: 215px;
+  }
+  .menu .table-one,
+  .menu .table-two {
+    width: 50%;
+  }
+  .menu .table-one {
+    padding-right: 40px;
+  }
+  .menu .table-two {
+    padding-left: 40px;
+  }
+  .dishes .title {
+    padding-left: 20px;
+  }
+  blockquote:before {
+    left: 0.5em;
+  }
+  blockquote:after {
+    right: 0.5em;
+  }
+  .menu-modal .menu-modal-content {
+    width: 60%;
+  }
+  .gallery {
+    padding: 0 40px;
+  }
+  .about {
+    padding: 0 40px;
+  }
+  .about p,
+  .about ul {
+    margin: 20px 0px;
+  }
+  .about hr {
+    margin: 0;
+  }
+  .title,
+  #subtitle {
+    margin-left: 0;
+  }
+  .button-to-top {
+    margin-right: 40px;
+  }
+}
+/* desktop */
+@media screen and (min-width: 1024px) {
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  nav .nav-links {
+    margin: revert;
+    margin-right: 140px;
+    display: table;
+  }
+  .nav-links a {
+    color: gray;
+    padding: 5px 20px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+  }
+  .nav-container #image-link {
+    padding: 16px 160px;
+  }
+  ul.nav-links li {
+    display: inline-block;
+    list-style: none;
+  }
+
+  ul.nav-links a:hover,
+  ul.nav-links a:focus {
+    color: rgb(243, 73, 73);
+    border-top: 1px solid rgb(243, 73, 73);
+    border-bottom: 1px solid rgb(243, 73, 73);
+  }
+
+  nav a.icon {
+    display: none;
+  }
+  .title {
+    margin-bottom: 40px;
+  }
+  .menu .meal {
+    padding: 0px 160px;
+  }
+  .dishes {
+    margin: 20px 0;
+    padding: 0 140px;
+  }
+  .about {
+    padding: 0 160px;
+  }
+  .about hr {
+    margin: 0;
+  }
+  .about ul {
+    margin-left: 0;
+  }
+  .about p#firstP,
+  .about p#secondP {
+    text-align: left;
+  }
+
+  .about p,
+  .about p#subtitle,
+  .about h3.title {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-container #section-one,
+  .about-container #section-two {
+    width: 48%;
+  }
+
+  .about .quote {
+    /* top right-left bottom */
+    padding: 70px 20px 0;
+  }
+  blockquote::before,
+  blockquote::after {
+    font-size: 4em;
+  }
+  blockquote::after {
+    right: 0.6em;
+    bottom: -0.9em;
+  }
+  blockquote::before {
+    left: 0.5em;
+    top: 0.8em;
+  }
+
+  .gallery {
+    padding: 0 160px;
+  }
+
+  .button-to-top {
+    margin-right: 100px;
+  }
+
+  .main-footer {
+    flex-wrap: inherit;
+    padding: 0 160px;
+  }
+  .main-footer .box {
+    padding: 40px 0;
+  }
+  .main-footer .box li {
+    text-align: left;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1289px) {
+  blockquote::after {
+    right: -0.1em;
+  }
+  blockquote::before {
+    left: 0;
+  }
+  .text p::before {
+    left: 370px;
+  }
+  .text p::after {
+    right: 370px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .text p::before {
+    left: 410px;
+  }
+  .text p::after {
+    right: 410px;
+  }
+  blockquote::after {
+    right: 1.4em;
+  }
+  blockquote::before {
+    left: 0.6em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  blockquote::before {
+    top: 0.7em;
+    left: 0em;
+  }
+  blockquote::after {
+    right: 0.8em;
+  }
+
+  .about .quote {
+    padding-top: 60px;
+  }
+
+  .text p::after {
+    right: 440px;
+    width: 40px;
+  }
+  .text p::before {
+    left: 440px;
+    width: 40px;
+  }
+}
